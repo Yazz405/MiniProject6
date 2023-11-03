@@ -57,7 +57,7 @@ public class MergeSort implements Sorter {
    * merges two parts of an array, the first part coming from [lo, mid) and the second from [mid, hi),
    * is arranged in assending order
    */
-  static <T> void merge(T[] values, int lo, int mid, int hi, Comparator<? super T> order) {
+  public static <T> void merge(T[] values, int lo, int mid, int hi, Comparator<? super T> order) {
     T[] result = values.clone();
     int i;
     int startMid = mid;

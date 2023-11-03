@@ -32,11 +32,17 @@ public class MergeSort implements Sorter {
   // | Methods |
   // +---------+
 
+  /*
+   * sorts values into ascending order using inputed order
+   */
   @Override
   public <T> void sort(T[] values, Comparator<? super T> order) {
     mergeSort(values, 0, values.length, order);
   } // sort(T[], Comparator<? super T>
 
+  /*
+   * sorts values into ascending order using inputed order
+   */
   public <T> void mergeSort(T[] values, int lb, int ub, Comparator<? super T> order) {
     int mid = lb + (ub - lb) / 2;
 
@@ -47,6 +53,10 @@ public class MergeSort implements Sorter {
     }//if
   }// mergeSort(T[], int, int, int, Comparator<? super T>)
 
+  /*
+   * merges two parts of an array, the first part coming from [lo, mid) and the second from [mid, hi),
+   * is arranged in assending order
+   */
   static <T> void merge(T[] values, int lo, int mid, int hi, Comparator<? super T> order) {
     T[] result = values.clone();
     int i;

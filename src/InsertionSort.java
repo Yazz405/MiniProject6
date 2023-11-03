@@ -7,7 +7,6 @@ import java.util.Comparator;
  */
 
 public class InsertionSort implements Sorter {
-
   // +--------+------------------------------------------------------
   // | Fields |
   // +--------+
@@ -31,6 +30,9 @@ public class InsertionSort implements Sorter {
   // | Methods |
   // +---------+
 
+  /*
+   * sorts the values into ascending order using inputed order
+   */
   @Override
   public <T> void sort(T[] values, Comparator<? super T> order) {
     T temp;
@@ -52,6 +54,7 @@ public class InsertionSort implements Sorter {
         }//for 
       }//if
     }//for
+
   } // sort(T[], Comparator<? super T>
 
 } // class InsertionSort
